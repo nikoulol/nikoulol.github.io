@@ -1,38 +1,8 @@
-// Wait for page to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Counter functionality
-    let count = 0;
-    const countElement = document.getElementById('count');
-    const incrementBtn = document.getElementById('increment-btn');
-    const resetBtn = document.getElementById('reset-btn');
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Increment counter
-    incrementBtn.addEventListener('click', function() {
-        count++;
-        countElement.textContent = count;
-        
-        // Add visual feedback
-        countElement.style.transform = 'scale(1.3)';
-        setTimeout(() => {
-            countElement.style.transform = 'scale(1)';
-        }, 200);
-        
-        // Fun color change
-        const colors = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b'];
-        countElement.style.color = colors[count % colors.length];
-    });
-    
-    // Reset counter
-    resetBtn.addEventListener('click', function() {
-        count = 0;
-        countElement.textContent = count;
-        countElement.style.color = '#3b82f6';
-        
-        // Add confirmation
-        alert('Counter reset to zero!');
-    });
-    
-    // Smooth scroll for navigation links
+    // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -49,17 +19,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add fun hover effect to feature cards
-    document.querySelectorAll('.feature-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.15)';
+    // Animate skill bars on scroll
+    const animateSkillBars = () => {
+        const skillBars = document.querySelectorAll('.skill-level');
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.transition = 'width 1.5s ease-in-out';
+                bar.style.width = width;
+            }, 300);
         });
-        card.addEventListener('mouseleave', function() {
-            this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.05)';
+    };
+    
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.3
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                if(entry.target.id === 'skills') {
+                    animateSkillBars();
+                }
+            }
         });
+    }, observerOptions);
+    
+    // Observe sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
     });
     
-    // Console welcome message
-    console.log('🚀 Static site loaded successfully!');
-    console.log('Try clicking the counter buttons!');
+    // Form submission (demo only)
+    const contactForm = document.querySelector('.message-form');
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent! (This is a demo - in a real site, this would connect to a backend)');
+            this.reset();
+        });
+    }
+    
+    // Add parallax effect to smoke trails
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const smokeLeft = document.querySelector('.smoke-left');
+        const smokeRight = document.querySelector('.smoke-right');
+        
+        if(smokeLeft && smokeRight) {
+            smokeLeft.style.transform = `rotate(20deg) translateY(${scrolled * 0.1}px)`;
+            smokeRight.style.transform = `rotate(-20deg) translateY(${scrolled * 0.15}px)`;
+        }
+    });
+    
+    // One Piece console message
+    console.log(`
+    ⚓ Welcome to the Grand Line of Code!
+    ⛵ "I'm going to be the King of the Developers!" 
+    `);
 });

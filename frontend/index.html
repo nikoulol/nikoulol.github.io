@@ -3,63 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Site</title>
+    <title>Nikou's Profile | One Piece Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Marcellus+SC&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MySite</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="one-piece-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <!-- REPLACE THIS IMAGE PATH WITH YOUR LOGO -->
+                <img src="images/header.png" alt="NIKOU'S PROFILE">
+            </a>
+            <div class="nav-links">
+                <a href="#home"><i class="fas fa-anchor"></i> Home</a>
+                <a href="#about"><i class="fas fa-user"></i> About</a>
+                <a href="#skills"><i class="fas fa-fist-raised"></i> Skills</a>
+                <a href="#projects"><i class="fas fa-treasure-chest"></i> Projects</a>
+                <a href="#contact"><i class="fas fa-map-marked-alt"></i> Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <section id="hero">
-            <h1>Welcome to My Static Site 🚀</h1>
-            <p>This site is fast, secure, and hosted for free on GitHub Pages.</p>
-            <a href="#projects" class="btn">See My Work</a>
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="smoke-trail smoke-left"></div>
+        <div class="smoke-trail smoke-right"></div>
+        <div class="hero-content">
+            <h1 class="pirata-title">SETTING SAIL ON THE <span class="grand-line">GRAND LINE</span> OF CODE</h1>
+            <p class="hero-subtitle">Navigating through frontend seas & backend currents</p>
+            <a href="#about" class="btn bounty-btn">VIEW MY BOUNTY <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="wave-divider"></div>
+    </section>
 
-        <section id="features">
-            <h2>Why Static?</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Blazing Fast</h3>
-                    <p>No server processing means instant loading.</p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2><i class="fas fa-compass"></i> ABOUT THE CAPTAIN</h2>
+            <div class="sanji-smoke"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Yo! I'm <strong>Nikou</strong>, a developer with a passion for adventure just like the Straw Hat Crew. I believe in building things that make waves in the digital ocean.</p>
+                <div class="devil-fruit">
+                    <h3><i class="fas fa-apple-alt"></i> My Devil Fruit Power</h3>
+                    <p><strong>Code-Code Fruit:</strong> The ability to turn coffee into clean, functional applications.</p>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Super Secure</h3>
-                    <p>No database or backend to hack.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-wallet"></i>
-                    <h3>Free Hosting</h3>
-                    <p>GitHub Pages hosts it for free forever.</p>
+                <blockquote class="nakama-quote">
+                    "I don't want to conquer anything. I just want to build what makes people smile."
+                </blockquote>
+            </div>
+            <div class="about-image">
+                <!-- ADD YOUR PHOTO HERE -->
+                <div class="profile-placeholder">
+                    <i class="fas fa-user-pirate"></i>
+                    <p>Your Photo Here</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="demo">
-            <h2>Interactive Demo</h2>
-            <div class="demo-box">
-                <p id="counter-text">Counter: <span id="count">0</span></p>
-                <button id="increment-btn" class="btn"><i class="fas fa-plus"></i> Click Me!</button>
-                <button id="reset-btn" class="btn secondary">Reset</button>
+    <!-- Skills Section -->
+    <section id="skills" class="section dark">
+        <div class="section-header">
+            <h2><i class="fas fa-swords"></i> CREW SKILLS</h2>
+            <div class="sanji-smoke reverse"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <h3>Frontend Navigation</h3>
+                <p>HTML, CSS, JavaScript</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
             </div>
-        </section>
-    </main>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <h3>Backend Waters</h3>
+                <p>Node.js, Python</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                <h3>Design & UI</h3>
+                <p>Figma, Responsive Design</p>
+                <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <h2><i class="fas fa-treasure-chest"></i> VOYAGE LOG</h2>
+            <div class="sanji-smoke"></div>
+        </div>
+        <div class="projects-grid">
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Going Merry Website</h3>
+                    <span class="project-bounty">50,000,000 Beri</span>
+                </div>
+                <p>A ship (website) built for adventure with smooth sailing (performance).</p>
+                <div class="project-tech">
+                    <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <a href="#" class="project-link">View Voyage Log <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>All Blue Database</h3>
+                    <span class="project-bounty">80,000,000 Beri</span>
+                </div>
+                <p>The ultimate collection of aquatic data (full-stack application).</p>
+                <div class="project-tech">
+                    <span>Node.js</span><span>MongoDB</span><span>React</span>
+                </div>
+                <a href="#" class="project-link">View Voyage Log <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <!-- ADD MORE PROJECTS HERE -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section dark">
+        <div class="section-header">
+            <h2><i class="fas fa-map-marked-alt"></i> SEND A DEN DEN MUSHI</h2>
+            <div class="sanji-smoke reverse"></div>
+        </div>
+        <div class="contact-content">
+            <p>Looking for a nakama for your next adventure? Let's chart a course together!</p>
+            <div class="contact-links">
+                <a href="mailto:you@example.com" class="contact-btn"><i class="fas fa-envelope"></i> Mail</a>
+                <a href="https://github.com" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+            <form class="message-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Den Den Mushi Number (Email)" required>
+                <textarea placeholder="Message in a bottle..." rows="4" required></textarea>
+                <button type="submit" class="btn bounty-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Built with plain HTML, CSS & JavaScript • Hosted on GitHub Pages</p>
+        <p>© <span id="current-year">2024</span> Nikou's Profile. All hands on deck!</p>
+        <p class="footer-quote">"The dreams of pirates... will never end!"</p>
     </footer>
 
     <script src="script.js"></script>
