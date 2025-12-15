@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MySite</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to My Static Site 🚀</h1>
+            <p>This site is fast, secure, and hosted for free on GitHub Pages.</p>
+            <a href="#projects" class="btn">See My Work</a>
+        </section>
+
+        <section id="features">
+            <h2>Why Static?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Blazing Fast</h3>
+                    <p>No server processing means instant loading.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Super Secure</h3>
+                    <p>No database or backend to hack.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Free Hosting</h3>
+                    <p>GitHub Pages hosts it for free forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo">
+            <h2>Interactive Demo</h2>
+            <div class="demo-box">
+                <p id="counter-text">Counter: <span id="count">0</span></p>
+                <button id="increment-btn" class="btn"><i class="fas fa-plus"></i> Click Me!</button>
+                <button id="reset-btn" class="btn secondary">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with plain HTML, CSS & JavaScript • Hosted on GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
