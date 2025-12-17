@@ -9,151 +9,475 @@
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Marcellus+SC&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="one-piece-nav">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <!-- REPLACE THIS IMAGE PATH WITH YOUR LOGO -->
-                <img src="images/header.png" alt="NIKOU'S PROFILE">
-            </a>
-            <div class="nav-links">
-                <a href="#home"><i class="fas fa-anchor"></i> Home</a>
-                <a href="#about"><i class="fas fa-user"></i> About</a>
-                <a href="#skills"><i class="fas fa-fist-raised"></i> Skills</a>
-                <a href="#projects"><i class="fas fa-treasure-chest"></i> Projects</a>
-                <a href="#contact"><i class="fas fa-map-marked-alt"></i> Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Full Width Header Banner -->
+    <header class="full-header">
+        <img src="images/header.png" alt="NIKOU'S PROFILE" class="header-banner">
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="smoke-trail smoke-left"></div>
-        <div class="smoke-trail smoke-right"></div>
         <div class="hero-content">
             <h1 class="pirata-title">SETTING SAIL ON THE <span class="grand-line">GRAND LINE</span> OF CODE</h1>
             <p class="hero-subtitle">Navigating through frontend seas & backend currents</p>
-            <a href="#about" class="btn bounty-btn">VIEW MY BOUNTY <i class="fas fa-chevron-right"></i></a>
         </div>
-        <div class="wave-divider"></div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
+    <!-- ========== TREASURE CHEST GALLERY ========== -->
+    <section id="crew-profiles" class="section">
         <div class="section-header">
-            <h2><i class="fas fa-compass"></i> ABOUT THE CAPTAIN</h2>
+            <h2><i class="fas fa-users"></i> MEET THE CREW</h2>
             <div class="sanji-smoke"></div>
+            <p class="section-subtitle">Click a treasure chest to reveal what's inside</p>
         </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Yo! I'm <strong>Nikou</strong>, a developer with a passion for adventure just like the Straw Hat Crew. I believe in building things that make waves in the digital ocean.</p>
-                <div class="devil-fruit">
-                    <h3><i class="fas fa-apple-alt"></i> My Devil Fruit Power</h3>
-                    <p><strong>Code-Code Fruit:</strong> The ability to turn coffee into clean, functional applications.</p>
+        
+        <div class="crew-gallery">
+            <!-- LUFFY -->
+            <div class="treasure-container" data-character="luffy">
+                <div class="treasure-closed">
+                    <img src="images/luffy-chest.png" alt="Luffy with chest" class="character-img">
+                    <h3>Monkey D. Luffy</h3>
+                    <p class="card-role">Captain of Ambition</p>
                 </div>
-                <blockquote class="nakama-quote">
-                    "I don't want to conquer anything. I just want to build what makes people smile."
-                </blockquote>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <img src="images/nikou-photo.jpg" alt="Nikou Carlos Gepoleo" class="profile-photo">
+                            <div class="profile-title">
+                                <h3>NIKOU CARLOS GEPOLEO</h3>
+                                <p>Future Pirate King Developer</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <strong>Age:</strong>
+                                    <span>21</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Education:</strong>
+                                    <span>BSIT - Polytechnic University of the Philippines - San Juan (2022-2025*)</span>
+                                    <br>
+                                    <span>Pasay City National Science High School - JHS & SHS (2016-2022)</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-bullseye"></i>
+                                <div>
+                                    <strong>Fields of Interest:</strong>
+                                    <span>Cybersecurity, Penetration Testing, Quality Assurance, Software Testing</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-compass"></i>
+                                <div>
+                                    <strong>Current Journey:</strong>
+                                    <span>Exploring the New World of Web Development</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"I'm gonna be the developer who finds all the bugs in the system!"</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="about-image">
-                <!-- ADD YOUR PHOTO HERE -->
-                <div class="profile-placeholder">
-                    <i class="fas fa-user-pirate"></i>
-                    <p>Your Photo Here</p>
+            
+            <!-- ZORO -->
+            <div class="treasure-container" data-character="zoro">
+                <div class="treasure-closed">
+                    <img src="images/zoro-chest.png" alt="Zoro with chest" class="character-img">
+                    <h3>Roronoa Zoro</h3>
+                    <p class="card-role">Swordsman of Discipline</p>
+                </div>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <div class="profile-title">
+                                <h3>TECHNICAL SKILLS</h3>
+                                <p>Three-Sword Style Programming</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <i class="fab fa-html5"></i>
+                                <div>
+                                    <strong>HTML:</strong>
+                                    <div class="skill-level"><div class="skill-fill" style="width: 85%"></div></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <div>
+                                    <strong>CSS:</strong>
+                                    <div class="skill-level"><div class="skill-fill" style="width: 80%"></div></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fab fa-js"></i>
+                                <div>
+                                    <strong>JavaScript:</strong>
+                                    <div class="skill-level"><div class="skill-fill" style="width: 70%"></div></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fab fa-python"></i>
+                                <div>
+                                    <strong>Python:</strong>
+                                    <div class="skill-level"><div class="skill-fill" style="width: 65%"></div></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-database"></i>
+                                <div>
+                                    <strong>SQL:</strong>
+                                    <div class="skill-level"><div class="skill-fill" style="width: 60%"></div></div>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <strong>Dev Tools & Technologies:</strong>
+                                    <div>
+                                        <span class="tech-tag">MongoDB</span>
+                                        <span class="tech-tag">VS Code</span>
+                                        <span class="tech-tag">Postman</span>
+                                        <span class="tech-tag">C++</span>
+                                        <span class="tech-tag">Git</span>
+                                        <span class="tech-tag">GitHub</span>
+                                        <span class="tech-tag">Figma</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Discipline in coding is sharper than any blade!"</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NAMI -->
+            <div class="treasure-container" data-character="nami">
+                <div class="treasure-closed">
+                    <img src="images/nami-chest.png" alt="Nami with chest" class="character-img">
+                    <h3>Nami</h3>
+                    <p class="card-role">Navigator of Knowledge</p>
+                </div>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <div class="profile-title">
+                                <h3>ACADEMIC JOURNEY</h3>
+                                <p>Charting the Course of Learning</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <strong>Favorite Subjects:</strong>
+                                    <p>Discrete Structures, Data Communications & Networking, Data Structures & Algorithms, Information Management</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-flag-checkered"></i>
+                                <div>
+                                    <strong>Current Goal:</strong>
+                                    <p>Sharpening my coding skills to become a versatile developer</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <strong>Future Aspirations:</strong>
+                                    <p>• Enter the cybersecurity field</p>
+                                    <p>• Obtain industry certifications</p>
+                                    <p>• Build a robust technical foundation</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-ship"></i>
+                                <div>
+                                    <strong>Learning Philosophy:</strong>
+                                    <p>"Every line of code is a step closer to mastery. I navigate through complex problems by breaking them down, just like charting unknown seas - one coordinate at a time."</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Knowledge is the true treasure. I'm mapping out the entire world of computer science!"</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- USOPP -->
+            <div class="treasure-container" data-character="usopp">
+                <div class="treasure-closed">
+                    <img src="images/usopp-chest.png" alt="Usopp with chest" class="character-img">
+                    <h3>Usopp</h3>
+                    <p class="card-role">Sniper of Precision</p>
+                </div>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <div class="profile-title">
+                                <h3>PROBLEM-SOLVING APPROACH</h3>
+                                <p>Hunting Bugs Like a True Sniper</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <strong>Research Methodology:</strong>
+                                    <p>I start by studying forums, documentation, and watching coding demonstrations to understand different perspectives before tackling a problem.</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <strong>Debugging Strategy:</strong>
+                                    <p>When faced with challenging bugs, I approach them from multiple angles - stepping through code methodically, testing edge cases, and consulting developer communities.</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-crosshairs"></i>
+                                <div>
+                                    <strong>Quality Mindset:</strong>
+                                    <p>As someone interested in QA, I focus on precision, attention to detail, and systematic testing - aiming to catch issues before they reach production.</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>Community Involvement:</strong>
+                                    <div>
+                                        <span class="tech-tag">Stack Overflow</span>
+                                        <span class="tech-tag">Dev.to</span>
+                                        <span class="tech-tag">GitHub Discussions</span>
+                                        <span class="tech-tag">Local Tech Meetups</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"A true sniper doesn't just shoot - they observe, calculate, and strike with precision. Debugging is no different!"</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SANJI -->
+            <div class="treasure-container" data-character="sanji">
+                <div class="treasure-closed">
+                    <img src="images/sanji-chest.png" alt="Sanji with chest" class="character-img">
+                    <h3>Sanji Vinsmoke</h3>
+                    <p class="card-role">Chef of Creativity</p>
+                </div>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <div class="profile-title">
+                                <h3>PROJECTS & WORKS</h3>
+                                <p>Cooking Up Digital Solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="project-item">
+                                <i class="fas fa-print"></i>
+                                <div>
+                                    <strong>Printease</strong>
+                                    <p>Capstone Project - A comprehensive printing service platform</p>
+                                    <a href="https://printease-xi.vercel.app/" target="_blank" class="project-link">
+                                        <i class="fas fa-external-link-alt"></i> View Live Project
+                                    </a>
+                                    <div>
+                                        <span class="tech-tag">Full Stack</span>
+                                        <span class="tech-tag">Web Application</span>
+                                        <span class="tech-tag">Academic Project</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <i class="fas fa-hard-hat"></i>
+                                <div>
+                                    <strong>More Coming Soon</strong>
+                                    <p>Currently developing new projects to expand my portfolio. Each project is crafted with attention to detail and user experience, following Sanji's philosophy of perfection in creation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"A well-coded project, like a perfect meal, should satisfy both functionally and aesthetically!"</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ROBIN -->
+            <div class="treasure-container" data-character="robin">
+                <div class="treasure-closed">
+                    <img src="images/robin-chest.png" alt="Robin with chest" class="character-img">
+                    <h3>Nico Robin</h3>
+                    <p class="card-role">Archaeologist of Connections</p>
+                </div>
+                
+                <div class="treasure-open">
+                    <div class="chest-lid">
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="treasure-content">
+                        <div class="profile-header">
+                            <div class="profile-title">
+                                <h3>CONNECT WITH ME</h3>
+                                <p>Uncovering Ancient Ruins of Code Together</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="contact-item">
+                                <a href="https://github.com/nikoulol" target="_blank" class="contact-link">
+                                    <i class="fab fa-github"></i>
+                                    <div>
+                                        <strong>GitHub</strong>
+                                        <p>@nikoulol - Explore my code repositories</p>
+                                    </div>
+                                    <i class="fas fa-external-link-alt link-icon"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <a href="https://www.linkedin.com/in/nikou-carlos-gepoleo-728341289/" target="_blank" class="contact-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <div>
+                                        <strong>LinkedIn</strong>
+                                        <p>Nikou Carlos Gepoleo - Professional network</p>
+                                    </div>
+                                    <i class="fas fa-external-link-alt link-icon"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <a href="mailto:nikoucarlos@gmail.com" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <p>nikoucarlos@gmail.com - Let's collaborate!</p>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-link">
+                                    <i class="fas fa-ship"></i>
+                                    <div>
+                                        <strong>This Portfolio</strong>
+                                        <p>You're already exploring my digital territory! This site represents my journey and capabilities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"The right connections can uncover the deepest secrets of technology and create powerful alliances."</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        
+                        <button class="close-treasure">Close Chest <i class="fas fa-times"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Overlay for when treasure is open -->
+        <div class="treasure-overlay"></div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section dark">
+    <!-- Additional Content Sections -->
+    <section class="section">
         <div class="section-header">
-            <h2><i class="fas fa-swords"></i> CREW SKILLS</h2>
-            <div class="sanji-smoke reverse"></div>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                <h3>Frontend Navigation</h3>
-                <p>HTML, CSS, JavaScript</p>
-                <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-server"></i></div>
-                <h3>Backend Waters</h3>
-                <p>Node.js, Python</p>
-                <div class="skill-bar"><div class="skill-level" style="width: 75%"></div></div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                <h3>Design & UI</h3>
-                <p>Figma, Responsive Design</p>
-                <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="section-header">
-            <h2><i class="fas fa-treasure-chest"></i> VOYAGE LOG</h2>
+            <h2><i class="fas fa-compass"></i> MY DEVELOPMENT PHILOSOPHY</h2>
             <div class="sanji-smoke"></div>
+            <p class="section-subtitle">Guiding principles on my coding journey</p>
         </div>
-        <div class="projects-grid">
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Going Merry Website</h3>
-                    <span class="project-bounty">50,000,000 Beri</span>
-                </div>
-                <p>A ship (website) built for adventure with smooth sailing (performance).</p>
-                <div class="project-tech">
-                    <span>HTML</span><span>CSS</span><span>JS</span>
-                </div>
-                <a href="#" class="project-link">View Voyage Log <i class="fas fa-external-link-alt"></i></a>
+        
+        <div class="philosophy-grid">
+            <div class="philosophy-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security-First Mindset</h3>
+                <p>Every application should be built with security considerations from the ground up. I believe in proactive protection rather than reactive fixes.</p>
             </div>
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>All Blue Database</h3>
-                    <span class="project-bounty">80,000,000 Beri</span>
-                </div>
-                <p>The ultimate collection of aquatic data (full-stack application).</p>
-                <div class="project-tech">
-                    <span>Node.js</span><span>MongoDB</span><span>React</span>
-                </div>
-                <a href="#" class="project-link">View Voyage Log <i class="fas fa-external-link-alt"></i></a>
+            <div class="philosophy-card">
+                <i class="fas fa-search"></i>
+                <h3>Thorough Investigation</h3>
+                <p>Like an archaeologist uncovering artifacts, I dig deep into problems, researching multiple solutions before implementing the most effective one.</p>
             </div>
-            <!-- ADD MORE PROJECTS HERE -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section dark">
-        <div class="section-header">
-            <h2><i class="fas fa-map-marked-alt"></i> SEND A DEN DEN MUSHI</h2>
-            <div class="sanji-smoke reverse"></div>
-        </div>
-        <div class="contact-content">
-            <p>Looking for a nakama for your next adventure? Let's chart a course together!</p>
-            <div class="contact-links">
-                <a href="mailto:you@example.com" class="contact-btn"><i class="fas fa-envelope"></i> Mail</a>
-                <a href="https://github.com" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <div class="philosophy-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Learning</h3>
+                <p>Technology advances through shared knowledge. I actively participate in coding communities and believe in learning from others' experiences.</p>
             </div>
-            <form class="message-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Den Den Mushi Number (Email)" required>
-                <textarea placeholder="Message in a bottle..." rows="4" required></textarea>
-                <button type="submit" class="btn bounty-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© <span id="current-year">2024</span> Nikou's Profile. All hands on deck!</p>
-        <p class="footer-quote">"The dreams of pirates... will never end!"</p>
+        <p>© <span id="current-year">2024</span> Nikou Carlos Gepoleo. All hands on deck!</p>
+        <p class="footer-sub">This portfolio is my treasure map to the world of technology</p>
     </footer>
 
     <script src="script.js"></script>
